@@ -335,7 +335,7 @@ $ sudo wget https://bin.equinox.io/c/4VmDzA7iaHb/ngrok-stable-linux-arm.zip
 $ sudo unzip ngrok-stable-linux-arm.zip
 $ ./ngrok http 5000
 ```
-![This is an image](https://github.com/cupokoffi8/CPE-322/blob/main/Labs/Lab4/Images/Flask/ngrock.png)
+![This is an image](https://github.com/cupokoffi8/CPE-322/blob/main/Labs/Lab4/Images/Flask/ngrok.png)
 
   ```ssh
 $ cd ~/iot/lesson4
