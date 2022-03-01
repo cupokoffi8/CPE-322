@@ -312,3 +312,45 @@ Post 20 to the Mem List at http://127.0.0.1:8000/mem
 ![This is an image](https://github.com/cupokoffi8/CPE-322/blob/main/Labs/Lab4/Images/DjangoRest/ViewApp.png)
 
 ## *Flask*
+
+  ```ssh
+$ cd ~/iot/lesson4
+$ python3 hello_world.py
+```
+![This is an image](https://github.com/cupokoffi8/CPE-322/blob/main/Labs/Lab4/Images/Flask/RunFlask/RunFlask1.png)
+![This is an image](https://github.com/cupokoffi8/CPE-322/blob/main/Labs/Lab4/Images/Flask/RunFlask/RunFlask2.png)
+
+  ```ssh
+$ sudo pip3 install -U flask-ask
+```
+![This is an image](https://github.com/cupokoffi8/CPE-322/blob/main/Labs/Lab4/Images/Flask/InstallFlaskAsk.png)
+
+  ```ssh
+$ sudo pip3 install 'cryptography<2.2' 
+```
+![This is an image](https://github.com/cupokoffi8/CPE-322/blob/main/Labs/Lab4/Images/Flask/InstallCryptography.png) 
+
+  ```ssh
+$ sudo wget https://bin.equinox.io/c/4VmDzA7iaHb/ngrok-stable-linux-arm.zip
+$ sudo unzip ngrok-stable-linux-arm.zip
+$ ./ngrok http 5000
+```
+![This is an image](https://github.com/cupokoffi8/CPE-322/blob/main/Labs/Lab4/Images/Flask/ngrock.png)
+
+  ```ssh
+$ cd ~/iot/lesson4
+$ python3 memory_game.py
+```
+![This is an image](https://github.com/cupokoffi8/CPE-322/blob/main/Labs/Lab4/Images/Flask/MemoryGame.png) 
+
+  ```ssh
+Alexa
+```
+![This is an image](https://github.com/cupokoffi8/CPE-322/blob/main/Labs/Lab4/Images/Flask/Alexa/Alexa1.png) 
+![This is an image](https://github.com/cupokoffi8/CPE-322/blob/main/Labs/Lab4/Images/Flask/Alexa/Alexa2.png) 
+![This is an image](https://github.com/cupokoffi8/CPE-322/blob/main/Labs/Lab4/Images/Flask/Alexa/Alexa3.png) 
+![This is an image](https://github.com/cupokoffi8/CPE-322/blob/main/Labs/Lab4/Images/Flask/Alexa/Alexa4.png) 
+![This is an image](https://github.com/cupokoffi8/CPE-322/blob/main/Labs/Lab4/Images/Flask/Alexa/Alexa5.png) 
+![This is an image](https://github.com/cupokoffi8/CPE-322/blob/main/Labs/Lab4/Images/Flask/Alexa/Alexa6.png) 
+![This is an image](https://github.com/cupokoffi8/CPE-322/blob/main/Labs/Lab4/Images/Flask/Alexa/Alexa7.png) 
+![This is an image](https://github.com/cupokoffi8/CPE-322/blob/main/Labs/Lab4/Images/Flask/Alexa/Alexa8.png) 
