@@ -185,3 +185,130 @@ pi@raspberrypi:~/stevens $ python3 manage.py runserver 0.0.0.0:8000
 ![This is an image](https://github.com/cupokoffi8/CPE-322/blob/main/Labs/Lab4/Images/Django/ViewApp.png)
 
 ## *Start Django REST Project "mycpu"*
+
+  ```ssh
+~ $ django-admin startproject mycpu
+~ $ cd mycpu
+~/mycpu $ ls
+```
+![This is an image](https://github.com/cupokoffi8/CPE-322/blob/main/Labs/Lab4/Images/DjangoRest/StartProject.png)
+
+  ```ssh
+~/mycpu $ python manage.py startapp myapp
+~/mycpu $ ls
+```
+![This is an image](https://github.com/cupokoffi8/CPE-322/blob/main/Labs/Lab4/Images/DjangoRest/StartApp.png)
+
+  ```ssh
+~/mycpu $ cd mycpu
+~/mycpu/mycpu $ ls
+asgi.py  __init__.py  __pycache__  settings.py  urls.py  wsgi.py
+~/mycpu/mycpu $ nano settings.py
+```
+![This is an image](https://github.com/cupokoffi8/CPE-322/blob/main/Labs/Lab4/Images/DjangoRest/Settings.png)
+
+  ```ssh
+~/mycpu/mycpu $ cp ~/iot/lesson4/mycpu/urls.py .
+~/mycpu/mycpu $ cd ..
+```
+![This is an image](https://github.com/cupokoffi8/CPE-322/blob/main/Labs/Lab4/Images/DjangoRest/CopyUrls.png)
+
+  ```ssh
+~/mycpu $ cd myapp
+~/mycpu/myapp $ ls
+admin.py  apps.py  __init__.py  migrations  models.py  tests.py  views.py
+~/mycpu/myapp $ cp ~/iot/lesson4/mycpu/admin.py .
+~/mycpu/myapp $ cp ~/iot/lesson4/mycpu/models.py .
+~/mycpu/myapp $ cp ~/iot/lesson4/mycpu/views.py .
+~/mycpu/myapp $ cp ~/iot/lesson4/mycpu/serializers.py .
+```
+![This is an image](https://github.com/cupokoffi8/CPE-322/blob/main/Labs/Lab4/Images/DjangoRest/CopyAdmin.png)
+
+  ```ssh
+~/mycpu/myapp $ nano views.py
+```
+![This is an image](https://github.com/cupokoffi8/CPE-322/blob/main/Labs/Lab4/Images/DjangoRest/ChangePassword.png)
+
+  ```ssh
+~/mycpu/myapp $ mkdir static templates
+~/mycpu/myapp $ cd templates
+~/mycpu/myapp/templates $ mkdir myapp
+~/mycpu/myapp/templates $ cd myapp
+~/mycpu/myapp/templates/myapp $ cp ~/iot/lesson4/mycpu/index.html .
+```
+![This is an image](https://github.com/cupokoffi8/CPE-322/blob/main/Labs/Lab4/Images/DjangoRest/CopyIndex.png)
+
+  ```ssh
+~/mycpu/myapp/templates/myapp $ nano index.html
+```
+![This is an image](https://github.com/cupokoffi8/CPE-322/blob/main/Labs/Lab4/Images/DjangoRest/EditIndex.png)
+
+  ```ssh
+~/mycpu/myapp/templates/myapp $ cd ~/mycpu/myapp/static
+~/mycpu/myapp/static $ cp ~/iot/lesson4/static/favicon.ico .
+~/mycpu/myapp/static $ mkdir myapp
+~/mycpu/myapp/static $ cd myapp
+~/mycpu/myapp/static/myapp $ cp ~/iot/lesson4/static/*css .
+~/mycpu/myapp/static/myapp $ cp ~/iot/lesson4/static/*js .
+~/mycpu/myapp/static/myapp $ cd ~/mycpu
+```
+![This is an image](https://github.com/cupokoffi8/CPE-322/blob/main/Labs/Lab4/Images/DjangoRest/CopyStatic.png)
+
+  ```ssh
+~/mycpu $ ls
+db.sqlite3  manage.py  myapp/  mycpu/
+~/mycpu $ cp ~/iot/lesson4/mycpu/controller.py .
+```
+![This is an image](https://github.com/cupokoffi8/CPE-322/blob/main/Labs/Lab4/Images/DjangoRest/Controller/ChangeController.png)
+
+  ```ssh
+~/mycpu $ nano controller.py
+```
+![This is an image](https://github.com/cupokoffi8/CPE-322/blob/main/Labs/Lab4/Images/DjangoRest/Controller/ChangePassword.png)
+
+  ```ssh
+~/mycpu $ sudo pip3 install -U psutil
+```
+![This is an image](https://github.com/cupokoffi8/CPE-322/blob/main/Labs/Lab4/Images/DjangoRest/InstallPsutil.png)
+
+  ```ssh
+~/mycpu $ python3 manage.py makemigrations myapp
+~/mycpu $ python3 manage.py migrate
+~/mycpu $ python3 manage.py createsuperuser
+```
+![This is an image](https://github.com/cupokoffi8/CPE-322/blob/main/Labs/Lab4/Images/DjangoRest/Migration.png)
+
+  ```ssh
+~/mycpu $ python3 manage.py runserver
+```
+![This is an image](https://github.com/cupokoffi8/CPE-322/blob/main/Labs/Lab4/Images/DjangoRest/RunServer/RunServer1.png)
+![This is an image](https://github.com/cupokoffi8/CPE-322/blob/main/Labs/Lab4/Images/DjangoRest/RunServer/RunServer2.png)
+![This is an image](https://github.com/cupokoffi8/CPE-322/blob/main/Labs/Lab4/Images/DjangoRest/RunServer/RunServer3.png)
+![This is an image](https://github.com/cupokoffi8/CPE-322/blob/main/Labs/Lab4/Images/DjangoRest/RunServer/RunServer4.png)
+
+  ```ssh
+Post 2022 to the Dt List at http://127.0.0.1:8000/dt
+```
+![This is an image](https://github.com/cupokoffi8/CPE-322/blob/main/Labs/Lab4/Images/DjangoRest/DTlist.png)
+
+  ```ssh
+Post 20 to the Cpu List at http://127.0.0.1:8000/cpu
+```
+![This is an image](https://github.com/cupokoffi8/CPE-322/blob/main/Labs/Lab4/Images/DjangoRest/CPUlist.png)
+
+  ```ssh
+Post 20 to the Mem List at http://127.0.0.1:8000/mem 
+```
+![This is an image](https://github.com/cupokoffi8/CPE-322/blob/main/Labs/Lab4/Images/DjangoRest/MemList.png)
+
+  ```ssh
+~/mycpu $ python3 controller.py
+```
+![This is an image](https://github.com/cupokoffi8/CPE-322/blob/main/Labs/Lab4/Images/DjangoRest/RunController.png)
+
+  ```ssh
+~/mycpu $ python manage.py runserver 0.0.0.0:8000
+```
+![This is an image](https://github.com/cupokoffi8/CPE-322/blob/main/Labs/Lab4/Images/DjangoRest/ViewApp.png)
+
+## *Flask*
