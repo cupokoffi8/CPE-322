@@ -1,4 +1,4 @@
-# CPE 322
+# Lab 8
 ## *Plot Data From Lab 7*
  ```ssh
 Install and update libraries
